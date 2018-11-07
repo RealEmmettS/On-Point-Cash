@@ -14,6 +14,8 @@
 		24524B0F2184E44B00C268F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24524B0D2184E44B00C268F0 /* LaunchScreen.storyboard */; };
 		24524B1A2184E44B00C268F0 /* On_Point_CashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24524B192184E44B00C268F0 /* On_Point_CashTests.swift */; };
 		24524B252184E44B00C268F0 /* On_Point_CashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24524B242184E44B00C268F0 /* On_Point_CashUITests.swift */; };
+		24D168332192D6C80073B802 /* ListTwoStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D168322192D6C80073B802 /* ListTwoStorage.swift */; };
+		24D168352192D6D60073B802 /* ListThreeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D168342192D6D60073B802 /* ListThreeStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		24524B202184E44B00C268F0 /* On Point CashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "On Point CashUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24524B242184E44B00C268F0 /* On_Point_CashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = On_Point_CashUITests.swift; sourceTree = "<group>"; };
 		24524B262184E44B00C268F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24D168322192D6C80073B802 /* ListTwoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTwoStorage.swift; sourceTree = "<group>"; };
+		24D168342192D6D60073B802 /* ListThreeStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListThreeStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				24524B042184E44A00C268F0 /* AppDelegate.swift */,
 				24524B062184E44A00C268F0 /* MainStorage.swift */,
+				24D168322192D6C80073B802 /* ListTwoStorage.swift */,
+				24D168342192D6D60073B802 /* ListThreeStorage.swift */,
 				24524B082184E44A00C268F0 /* Main.storyboard */,
 				24524B0B2184E44B00C268F0 /* Assets.xcassets */,
 				24524B0D2184E44B00C268F0 /* LaunchScreen.storyboard */,
@@ -257,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				24524B072184E44A00C268F0 /* MainStorage.swift in Sources */,
+				24D168332192D6C80073B802 /* ListTwoStorage.swift in Sources */,
+				24D168352192D6D60073B802 /* ListThreeStorage.swift in Sources */,
 				24524B052184E44A00C268F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

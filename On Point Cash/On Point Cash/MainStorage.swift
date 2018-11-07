@@ -10,24 +10,41 @@ import UIKit
 var currentMoney = Double(0)
 var totalMoney = Double(0)
 
+var currentMoneyTwo = Double(0)
+var totalMoneyTwo = Double(0)
+
+var currentMoneyThree = Double(0)
+var totalMoneyThree = Double(0)
+
 
 class ViewController: UIViewController {
 
-    var startingMoneyCount = UserDefaults.standard.value(forKey: "TM")
+    var startingMoneyCountOne = UserDefaults.standard.value(forKey: "TM1")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if startingMoneyCount == nil{
+        if startingMoneyCountOne == nil{
             money.text = "$0"
         } else {
-            money.text = "$\(startingMoneyCount!)"
+            money.text = "$\(startingMoneyCountOne!)"
         }
     }
+    
+    
+    @IBAction func saveText(_ sender: Any) {
+        
+    }
+    
+    
     
     
     @IBOutlet weak var money: UILabel!
     @IBOutlet weak var withdrawText: UITextField!
     @IBOutlet weak var depositText: UITextField!
+    @IBOutlet weak var listNumber: UILabel!
+    
+    
+    
     
     var newWithdraw = Double(0)
     var newDeposit = Double(0)
@@ -40,10 +57,10 @@ class ViewController: UIViewController {
             newWithdraw = Double(withdrawText.text!)!
         }
         
-        if startingMoneyCount == nil{
+        if startingMoneyCountOne == nil{
             totalMoney = 0-newWithdraw
-        }else if startingMoneyCount != nil{
-            currentMoney = startingMoneyCount as! Double
+        }else if startingMoneyCountOne != nil{
+            currentMoney = startingMoneyCountOne as! Double
             totalMoney = currentMoney-newWithdraw
         }
         
@@ -52,8 +69,8 @@ class ViewController: UIViewController {
         
         let storedMoney = Double(totalMoney)
         
-        UserDefaults.standard.set(storedMoney, forKey: "TM")
-        startingMoneyCount = UserDefaults.standard.value(forKey: "TM")
+        UserDefaults.standard.set(storedMoney, forKey: "TM1")
+        startingMoneyCountOne = UserDefaults.standard.value(forKey: "TM1")
     }
     
     
@@ -65,10 +82,10 @@ class ViewController: UIViewController {
             newDeposit = Double(depositText.text!)!
         }
         
-        if startingMoneyCount == nil{
+        if startingMoneyCountOne == nil{
             totalMoney = 0+newDeposit
-        }else if startingMoneyCount != nil{
-            currentMoney = startingMoneyCount as! Double
+        }else if startingMoneyCountOne != nil{
+            currentMoney = startingMoneyCountOne as! Double
             totalMoney = currentMoney+newDeposit
         }
         
@@ -77,16 +94,20 @@ class ViewController: UIViewController {
         
         let storedMoney = Double(totalMoney)
         
-        UserDefaults.standard.set(storedMoney, forKey: "TM")
-        startingMoneyCount = UserDefaults.standard.value(forKey: "TM")
+        UserDefaults.standard.set(storedMoney, forKey: "TM1")
+        startingMoneyCountOne = UserDefaults.standard.value(forKey: "TM1")
     }
     
     @IBAction func clearMoney(_ sender: Any) {
         totalMoney = Double(0)
         currentMoney = Double(0)
         money.text = "$0"
+        
+        withdrawText.text = ""
+        depositText.text = ""
+        
         let defaultNumber = Double(0)
-        UserDefaults.standard.set(defaultNumber, forKey: "TM")
+        UserDefaults.standard.set(defaultNumber, forKey: "TM1")
     }
     
     
