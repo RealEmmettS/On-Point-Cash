@@ -90,6 +90,7 @@ class ListTwoStorage: UIViewController {
         
         let defaultNumber = Double(0)
         UserDefaults.standard.set(defaultNumber, forKey: "TM2")
+        startingMoneyCountTwo = UserDefaults.standard.value(forKey: "TM2")
     }
     
     
